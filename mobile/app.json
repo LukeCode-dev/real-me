@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "Real Me Scanner",
+    "slug": "real-me-scanner",
+    "scheme": "realme",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#101113"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.realme.scanner",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Real Me Scanner needs camera access to perform body and face scans for your digital avatar.",
+        "NSPhotoLibraryUsageDescription": "Real Me Scanner needs photo library access to save your scan results.",
+        "NSPhotoLibraryAddUsageDescription": "Real Me Scanner needs permission to save scan photos to your library."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#101113"
+      },
+      "package": "com.realme.scanner",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Real Me Scanner needs camera access to perform body and face scans."
+        }
+      ],
+      "expo-router",
+      "expo-sensors",
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": "Allow Real Me Scanner to use Face ID for secure authentication."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
