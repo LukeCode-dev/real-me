@@ -54,16 +54,15 @@ function FloatingTitle() {
     <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.5}>
       <group position={[0, 15, -40]}>
         <mesh>
-          <textGeometry args={['REAL ME', {
-            size: 4,
-            depth: 0.5,
-          }]} />
+          <boxGeometry args={[20, 5, 0.5]} />
           <meshStandardMaterial
             color="#00d4ff"
             emissive="#00d4ff"
             emissiveIntensity={2}
             metalness={0.9}
             roughness={0.1}
+            transparent
+            opacity={0.3}
           />
         </mesh>
       </group>
